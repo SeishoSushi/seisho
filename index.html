@@ -15,14 +15,12 @@
 
     <header class="site-header">
         <div class="logo-container">
-    <a href="#inicio" onclick="switchSection('inicio'); return false;" style="display: flex; align-items: center; text-decoration: none;">
-        <img src="img/logo.png" alt="Seisho Sushi Logo" class="logo-img" style="height: 38px; width: auto; display: block; object-fit: contain;">
-        <div class="logo-text-group" style="margin-left: 10px; display: flex; flex-direction: column; justify-content: center;">
-            <h1 class="logo-text" style="font-size: 1.1rem; margin: 0; color: var(--text-main); font-family: var(--font-heading);">SEISHO</h1>
-            <span class="logo-sub" style="font-size: 0.6rem; letter-spacing: 1.5px; margin: 0; color: var(--text-muted); line-height: 1;">SUSHI & BAR</span>
-        </div>
-    </a>
-</div>
+            <a href="#inicio" onclick="switchSection('inicio'); return false;" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="img/logo.png" alt="Seisho Sushi Logo" class="logo-img" style="height: 38px; width: auto; display: block; object-fit: contain;">
+                <div class="logo-text-group" style="margin-left: 10px; display: flex; flex-direction: column; justify-content: center;">
+                    <h1 class="logo-text" style="font-size: 1.1rem; margin: 0; color: var(--text-main); font-family: var(--font-heading);">SEISHO</h1>
+                    <span class="logo-sub" style="font-size: 0.6rem; letter-spacing: 1.5px; margin: 0; color: var(--text-muted); line-height: 1;">SUSHI & BAR</span>
+                </div>
             </a>
         </div>
         <nav class="main-nav">
@@ -158,12 +156,11 @@
                     </select>
                 </div>
                 <div class="reserva-botones-container" style="display: flex; gap: 12px; align-items: center; margin-top: 1.5rem;"> 
-    <button type="submit" class="btn-primary" style="flex: 1;">Confirmar Reserva</button>
-    
-    <a href="https://wa.me/56967109265?text=Hola,%20quiero%20hacer%20una%20reserva%20en%20Seisho%20Sushi" class="social-btn whatsapp-btn" target="_blank" rel="noopener noreferrer" title="Reservar por WhatsApp" style="display: flex; align-items: center; justify-content: center; background-color: #25d366; width: 48px; height: 48px; border-radius: 50%; color: #fff; text-decoration: none; flex-shrink: 0;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    </a>
-</div>
+                    <button type="submit" class="btn-primary" style="flex: 1;">Confirmar Reserva</button>
+                    <a href="https://wa.me/56967109265?text=Hola,%20quiero%20hacer%20una%20reserva%20en%20Seisho%20Sushi" class="social-btn whatsapp-btn" target="_blank" rel="noopener noreferrer" title="Reservar por WhatsApp" style="display: flex; align-items: center; justify-content: center; background-color: #25d366; width: 48px; height: 48px; border-radius: 50%; color: #fff; text-decoration: none; flex-shrink: 0;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </a>
+                </div>
             </form>
         </div>
     </section>
@@ -183,42 +180,36 @@
                 </div>                
             </div>
 
-            <div id="cartaModal" class="carta-modal-overlay" onclick="cerrarCartaModal(event)" style="justify-content: center; align-items: center;">
-                <div style="position relative; max-width: 90%; max-height: 90vh; display: flex; justify-content: center; align-items: center;" onclick="event.stopPropagation()">
-                   <img id="imgCartaAmpliada" src="" alt="Carta Seisho Sushi" style="max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                    <button type="button" onclick="cerrarCartaModalDirecto()" style="position: absolute; top: -15px; right: -15px; background: var(--text-main); color: var(--white); border: none; width: 36px; height: 36px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">&times;</button>
+            <div class="carta-section" id="cartas">
                 <h3>Nuestras Cartas</h3>
-                </div>
-            </div>
-                    
-            <div class="carousel-container">                          
+                <div class="carousel-container">                          
                     <!-- CARTA 1 -->
                     <div class="card-item" onclick="abrirCartaModal('img/carta-nigiri.jpg')" style="cursor: pointer;" title="Haz clic para ampliar la carta">
                         <div class="card-img-holder">
-            <img src="img/carta-nigiri.jpg" alt="Carta Nigiri & Sashimi" onerror="this.src='https://via.placeholder.com/450x800/F4EFEB/6B6764?text=Carta+Nigiri'">
-        </div>
+                            <img src="img/carta-nigiri.jpg" alt="Carta Nigiri & Sashimi" onerror="this.src='https://via.placeholder.com/450x800/F4EFEB/6B6764?text=Carta+Nigiri'">
+                        </div>
                         <h5>Edición Nigiri & Sashimi</h5>
-                        <p>Selección diaria del mercado local e internacional.</p>
+                        <p>Selección diaria del mercado local e internacional. <em>(Haz clic para ver)</em></p>
                     </div>
 
                     <!-- CARTA 2 -->
                     <div class="card-item" onclick="abrirCartaModal('img/carta-rolls.jpg')" style="cursor: pointer;" title="Haz clic para ampliar la carta">
-        <div class="card-img-holder">
-            <img src="img/carta-rolls.jpg" alt="Carta Rolls de Autor" onerror="this.src='https://via.placeholder.com/450x800/F4EFEB/6B6764?text=Rolls+de+Autor'">
-        </div>
-        <h5>Rolls de Autor</h5>
-        <p>Combinaciones sutiles sin exceso de queso crema. <em>(Haz clic para ver)</em></p>
-    </div>
+                        <div class="card-img-holder">
+                            <img src="img/carta-rolls.jpg" alt="Carta Rolls de Autor" onerror="this.src='https://via.placeholder.com/450x800/F4EFEB/6B6764?text=Rolls+de+Autor'">
+                        </div>
+                        <h5>Rolls de Autor</h5>
+                        <p>Combinaciones sutiles sin exceso de queso crema. <em>(Haz clic para ver)</em></p>
+                    </div>
 
                     <!-- CARTA 3 -->
                     <div class="card-item" onclick="abrirCartaModal('img/carta-coctel.jpg')" style="cursor: pointer;" title="Haz clic para ampliar la carta">
-        <div class="card-img-holder">
-            <img src="img/carta-coctel.jpg" alt="Carta Coctelería" onerror="this.src='https://via.placeholder.com/450x800/F4EFEB/6B6764?text=Cocteleria'">
-        </div>
-        <h5>Coctelería & Mocktails</h5>
-        <p>Infusiones botánicas, sake y yuzu artesanal. <em>(Haz clic para ver)</em></p>
-    </div>
-</div>
+                        <div class="card-img-holder">
+                            <img src="img/carta-coctel.jpg" alt="Carta Coctelería" onerror="this.src='https://via.placeholder.com/450x800/F4EFEB/6B6764?text=Cocteleria'">
+                        </div>
+                        <h5>Coctelería & Mocktails</h5>
+                        <p>Infusiones botánicas, sake y yuzu artesanal. <em>(Haz clic para ver)</em></p>
+                    </div>
+                </div>
                 <div style="text-align: center; margin-top: 2rem;">
                     <a href="#seccion-platos" class="btn-primary" onclick="switchSection('seccion-platos'); return false;">
                         Ver Menú Completo
@@ -240,7 +231,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN PLATOS & ROLLS (PÁGINA INDEPENDIENTE) -->
+    <!-- SECCIÓN PLATOS & ROLLS -->
     <section id="seccion-platos" class="page-section">
         <div class="section-header">
             <h2>Nuestros Platos & Rolls</h2>
@@ -359,7 +350,6 @@
         </div>
         
         <div class="contacto-container">
-            <!-- Formulario a la izquierda -->
             <form class="contacto-info contacto-form" id="contactForm" action="https://formsubmit.co/bhcreoenti@gmail.com" method="POST">
                 <div class="form-group">
                     <input type="text" placeholder="Tu Nombre" required>
@@ -384,7 +374,6 @@
                 <button type="submit" class="btn-primary">Enviar Mensaje</button>
             </form>
 
-            <!-- Mapa e info a la derecha -->
             <div class="contacto-mapa visit-info">
                 <h3>Visítanos</h3>
                 <p>Ven a vivir la experiencia presencial en nuestro local con diseño exclusivo.</p>
@@ -398,7 +387,6 @@
     </section>
 
     <!-- FOOTER -->
-<!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-links">
             <a href="terminos.html" target="_blank" rel="noopener noreferrer">Términos y Condiciones</a>
@@ -406,15 +394,12 @@
         </div>
     
         <div class="social-buttons-container">
-            <!-- Instagram -->
             <a href="https://www.instagram.com/luztras.lasombra" class="social-btn instagram-btn" target="_blank" rel="noopener noreferrer" title="Instagram">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
             </a>
-            <!-- WhatsApp -->
             <a href="https://wa.me/56967109265?text=Hola,%20me%20gustaría%20hacer%20un%20pedido" class="social-btn whatsapp-btn" target="_blank" rel="noopener noreferrer" title="WhatsApp">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </a>
-            <!-- Facebook -->
             <a href="https://www.facebook.com" class="social-btn facebook-btn" target="_blank" rel="noopener noreferrer" title="Facebook">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             </a> 
@@ -457,6 +442,14 @@
                     <button type="submit" class="btn-primary full-width">Realizar Pedido</button>
                 </form>
             </div>
+        </div>
+    </div>
+
+    <!-- MODAL VISOR DE CARTAS 9:16 (BICHO CORREGIDO: UBICADO FUERA DE LAS SECCIONES) -->
+    <div id="cartaModal" class="carta-modal-overlay" onclick="cerrarCartaModal(event)">
+        <div class="carta-modal-box" onclick="event.stopPropagation()">
+            <img id="imgCartaAmpliada" src="" alt="Carta Seisho Sushi">
+            <button type="button" class="carta-close-btn" onclick="cerrarCartaModalDirecto()">&times;</button>
         </div>
     </div>
 
