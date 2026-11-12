@@ -1401,3 +1401,24 @@ body.legal-page-body {
         display: inline-block; /* Se activa solo en celular */
     }
 }
+
+@media (max-width: 768px) {
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem 1rem !important;
+    }
+    
+    .logo-img {
+        height: 32px !important; /* Se ajusta perfecto en pantallas móviles */
+    }
+    
+    .logo-text-group {
+        margin-left: 8px !important;
+    }
+    
+    .logo-text {
+        font-size: 1rem !important;
+    }
+}
