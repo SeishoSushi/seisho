@@ -1319,16 +1319,50 @@ body.legal-page-body {
         border-radius: 4px;
     }
 
-    /* 3. Video "Ritual para el paladar" compacto en móvil */
-    .video-section-preview {
-        padding: 1.5rem 1rem;
-    }
+/* CORRECCIÓN DEFINITIVA SECCIÓN RITUAL PARA EL PALADAR */
+.video-section-preview {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    box-sizing: border-box;
+    padding: 1.5rem !important;
+    gap: 1.5rem !important;
+    background-color: var(--bg-card); /* O el fondo que uses para las tarjetas */
+    border-radius: 8px;
+    margin: 2rem 0;
+}
 
-    .video-frame-placeholder {
-        aspect-ratio: 16 / 9;
-        height: auto;
-        max-height: 230px; /* Evita que se vea alargado verticalmente */
-    }
+.video-text-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center;
+}
+
+.video-text-box h4 {
+    font-size: 1.6rem !important;
+    margin-bottom: 0.8rem;
+}
+
+.video-text-box p {
+    font-size: 0.95rem !important;
+    line-height: 1.5;
+}
+
+.video-frame-placeholder {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.video-frame-placeholder video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block;
+}
 
     /* 4. Grillas de Productos y Cartas */
     .cards-grid-4,
