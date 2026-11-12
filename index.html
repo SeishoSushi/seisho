@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seisho Sushi</title>
+    <!-- Fuentes elegantes y sobrias: Cormorant Garamond y Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png" type="image/x-icon">    
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo-container">
+            <a href="#inicio" onclick="switchSection('inicio'); return false;" style="display: flex; align-items: center; text-decoration: none">
+                <img src="img/logo.png" alt="Seisho Sushi Logo" class="logo-img" onerror="this.style.display='none';" style="height: 45px; width: auto; display: block;">
+                <div class="logo-text-group" style="margin-left: 20px; display: flex; flex-direction: column; justify-content: center;">
+                    <h1 class="logo-text" style="font-size: 1.2rem; margin: 0; color: var(--text-main); font-family: var(--font-heading);">SEISHO</h1>
+                    <span class="logo-sub" style="font-size: 0.7rem; letter-spacing: 2px; margin: 0; color: var(--text-muted); line-height: 1;">SUSHI & BAR</span>
+                </div>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#inicio" class="nav-link active" data-target="inicio">Inicio</a></li>
+                <li><a href="#reservas" class="nav-link" data-target="reservas">Reservas</a></li>
+                <li><a href="#detras-del-sabor" class="nav-link" data-target="detras-del-sabor">Detrás del Sabor</a></li>
+                <li><a href="#conocenos" class="nav-link" data-target="conocenos">Conócenos</a></li>
+                <li><a href="#contactanos" class="nav-link" data-target="contactanos">Contáctanos</a></li>
+                <li><a href="#" onclick="toggleCart(); return false;" style="font-weight: 500;">Carrito</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- INICIO -->
+    <section id="inicio" class="page-section active-section">
+        <div class="hero-banner">
+            <div class="hero-content">
+                <h2>El arte del equilibrio en cada pieza</h2>
+                <p>Una experiencia culinaria inspirada en la tradición japonesa y la sutileza contemporánea.</p>
+                <a href="#cartas" class="btn-primary" onclick="switchSection('detras-del-sabor'); return false;">Ver Cartas</a> 
+                <a href="#reservas" class="btn-primary" onclick="switchSection('reservas'); return false;">Reserva tu mesa</a>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <!-- NUESTRA HISTORIA -->
+            <div class="historia-container">
+                <div class="historia-texto">
+                    <h2>Nuestra Historia</h2>
+                    <p>Seisho Sushi nace en pandemia cuando los trabajos eran escasos. Mi gusto por la buena comida en conjunto por la cultura japonesa crea un restaurant enfocado en llamar la tradición de estos platos.</p>
+                    <a href="#conocenos" class="text-link" onclick="switchSection('conocenos'); return false;">Conoce más de nosotros &rarr;</a>
+                </div>
+                <div class="historia-imagen">
+                    <img src="img/nuestra-historia.jpg" alt="Nuestra Historia - Seisho Sushi" class="img-historia">
+                </div>
+            </div>
+
+            <div class="cards-grid-4">
+                <div class="feature-card">
+                    <img src="img/catering-servicios.jpg" alt="Catering" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 12px;" onerror="this.style.display='none'">
+                    <h4>Catering</h4>
+                    <p>Llevamos la experiencia Seisho a tus eventos privados y corporativos.</p>
+                    <a href="#contactanos" class="btn-primary" onclick="switchSection('contactanos'); return false;">
+                        Envía tu Mensaje
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <img src="img/plato-omakase.jpg" alt="Menú Omakase" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 12px;" onerror="this.style.display='none'">
+                    <h4>Omakase</h4>
+                    <p>Déjate guiar por nuestro Itamae en un menú exclusivo de tiempos.</p>
+                    <a href="#detras-del-sabor" class="btn-primary" onclick="switchSection('detras-del-sabor'); return false;">
+                        Déjate Llevar
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <img src="img/delivery.jpg" alt="Para Llevar" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 12px;" onerror="this.style.display='none'">
+                    <h4>Para Llevar</h4>
+                    <p>Empaque ecoamigable diseñado para mantener la temperatura y textura ideal.</p>
+                    <a href="#reservas" class="btn-primary" onclick="switchSection('reservas'); return false;">
+                        Reserva tu Dely
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <img src="img/reserva-mesa.jpg" alt="Reserva tu Mesa" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 12px;" onerror="this.style.display='none'">
+                    <h4>Reserva tu Mesa</h4>
+                    <p>Disfruta de un ambiente íntimo y diseño minimalista en salón.</p>
+                    <a href="#reservas" class="btn-primary" onclick="switchSection('reservas'); return false;">
+                        Reserva tu Mesa
+                    </a>
+                </div>
+            </div>
+
+            <div class="info-strip">
+                <div>
+                    <h5>Ubicación</h5>
+                    <p>22 Norte & 5 1/2 Oriente, Talca</p>
+                </div>
+                <div>
+                    <h5>Horarios</h5>
+                    <p>Mar - Sáb: 13:00 - 23:00 hrs<br>Dom: 13:00 - 21:00 hrs</p>
+                </div>
+                <div>
+                    <h5>Contacto</h5>
+                    <p>+56 9 6710 9265<br>bhcreoenti@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESERVAS -->
+    <section id="reservas" class="page-section">
+        <div class="section-header">
+            <h2>Reserva tu Experiencia</h2>
+            <p>Asegura tu espacio en nuestro salón principal</p>
+        </div>
+
+        <div class="reserva-banner-bg">
+            <img src="img/conocenos-experiencia.jpg" alt="Experiencia Seisho Sushi" class="banner-img">
+            <div class="menu-intro-text">
+                <h3>Ambiente Exclusivo</h3>
+                <p>Disfruta de una velada íntima para todos tus sentidos</p>
+            </div>
+        </div>
+        <div class="reservation-container">
+            <form class="reservation-form" id="resForm">
+                <div class="form-group">
+                    <label for="resDate">Fecha</label>
+                    <input type="date" id="resDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="resGuests">Número de Personas</label>
+                    <select id="resGuests" required>
+                        <option value="1">1 Persona (Barra Omakase)</option>
+                        <option value="2">2 Personas</option>
+                        <option value="4">3 - 4 Personas</option>
+                        <option value="6">5 - 6 Personas (Mesa Tatami)</option>
+                        <option value="8">Más de 6 personas (Grupo)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="resTime">Horario</label>
+                    <select id="resTime" required>
+                        <option value="13:00">13:00 hrs (Almuerzo)</option>
+                        <option value="14:15">14:15 hrs (Almuerzo)</option>
+                        <option value="20:00">20:00 hrs (Cena)</option>
+                        <option value="21:30">21:30 hrs (Cena)</option>
+                    </select>
+                </div>
+                <div class="reserva-botones-container"> 
+                    <button type="submit" class="btn-primary full-width">Confirmar Reserva</button>
+                    <a href="https://wa.me/56967109265" class="social-btn whatsapp-btn" target="_blank">WhatsApp</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- DETRÁS DEL SABOR -->
+    <section id="detras-del-sabor" class="page-section">
+        <div class="section-header">
+            <h2>Detrás del Sabor</h2>
+            <p>Nuestras Cartas y Creaciones</p>
+        </div>
+        <div class="menu-showcase">
+            <div class="menu-banner-bg">
+                <img src="img/detras-del-sabor.jpg" alt="Detrás del Sabor - Seisho Sushi" class="banner-img">
+                <div class="menu-intro-text">
+                    <h3>Filosofía Culinaria</h3>
+                    <p>Cada corte de pescado y cada grano de arroz siguen un riguroso protocolo de precisión milimétrica.</p>
+                </div>                
+            </div>
+
+            <div class="carta-section" id="cartas">
+                <h3>Nuestras Cartas</h3>
+                <div class="carousel-container">
+                    
+                    <!-- CARTA 1 -->
+                    <div class="card-item">
+                        <div class="card-img-holder">
+                            <img src="img/carta-nigiri.jpg" alt="Carta Nigiri & Sashimi" onerror="this.src='https://via.placeholder.com/450x800/F4EFEB/6B6764?text=Carta+Nigiri'">
+                        </div>
+                        <h5>Edición Nigiri & Sashimi</h5>
+                        <p>Selección diaria del mercado local e internacional.</p>
+                    </div>
+
+                    <!-- CARTA 2 -->
+                    <div class="card-item">
+                        <div class="card-img-holder">
+                            <img src="img/carta-rolls.jpg" alt="Carta Rolls de Autor" onerror="this.src='https://via.placeholder.com/450x800/F4EFEB/6B6764?text=Rolls+de+Autor'">
+                        </div>
+                        <h5>Rolls de Autor</h5>
+                        <p>Combinaciones sutiles sin exceso de queso crema.</p>
+                    </div>
+
+                    <!-- CARTA 3 -->
+                    <div class="card-item">
+                        <div class="card-img-holder">
+                            <img src="img/carta-coctel.jpg" alt="Carta Coctelería" onerror="this.src='https://via.placeholder.com/450x800/F4EFEB/6B6764?text=Cocteleria'">
+                        </div>
+                        <h5>Coctelería & Mocktails</h5>
+                        <p>Infusiones botánicas, sake y yuzu artesanal.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="#seccion-platos" class="btn-primary" onclick="switchSection('seccion-platos'); return false;">
+                        Ver Menú Completo
+                    </a>
+                </div> 
+            </div>
+
+            <div class="video-section-preview">
+                <div class="video-text-box">
+                    <h4>Ritual para el paladar</h4>
+                    <p>Observa cómo nuestro equipo cuida cada detalle técnico para realzar la pureza del producto fresco.</p>
+                </div>
+                <div class="video-frame-placeholder" style="padding: 0; background: #000;">
+                    <video width="100%" height="100%" controls autoplay muted loop style="object-fit: cover; display: block; border-radius: 4px;">
+                        <source src="img/video-sushi.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PLATOS & ROLLS (PÁGINA INDEPENDIENTE) -->
+    <section id="seccion-platos" class="page-section">
+        <div class="section-header">
+            <h2>Nuestros Platos & Rolls</h2>
+            <p>Conoce al detalle nuestras creaciones preparadas al momento</p>
+        </div>
+
+        <div class="categoria-platos" id="rolls-especiales">
+            <h3 class="categoria-titulo">Rolls Especiales</h3>
+            <div class="cards-grid-4">
+                <div class="card-item">
+                    <div class="card-img-holder">
+                        <img src="img/roll-1.jpg" alt="Ebi Roll" onerror="this.src='https://via.placeholder.com/300x200/F4EFEB/6B6764?text=Ebi+Roll'">
+                    </div>
+                    <h5>Ebi Roll</h5>
+                    <p>Camarón empanado, palta, queso crema, envuelto en ciboulette.</p>
+                    <button class="btn-primary" onclick="agregarAlCarrito('Ebi Roll', 7200)">
+                        Agregar al Carrito
+                    </button>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-img-holder">
+                        <img src="img/roll-2.jpg" alt="Avocado Roll" onerror="this.src='https://via.placeholder.com/300x200/F4EFEB/6B6764?text=Avocado+Roll'">
+                    </div>
+                    <h5>Avocado Roll</h5>
+                    <p>Salmón fresco, palta y queso crema, envuelto en láminas de palta.</p>
+                    <button class="btn-primary" onclick="agregarAlCarrito('Avocado Roll', 6500)">
+                        Agregar al Carrito
+                    </button>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-img-holder">
+                        <img src="img/roll-3.jpg" alt="Furai Roll" onerror="this.src='https://via.placeholder.com/300x200/F4EFEB/6B6764?text=Furai+Roll'">
+                    </div>
+                    <h5>Furai Roll</h5>
+                    <p>Pollo tempura, queso crema y cebollín, tempura.</p>
+                    <button class="btn-primary" onclick="agregarAlCarrito('Furai Roll', 7500)">
+                        Agregar al Carrito
+                    </button>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-img-holder">
+                        <img src="img/roll-4.jpg" alt="California Roll" onerror="this.src='https://via.placeholder.com/300x200/F4EFEB/6B6764?text=California+Roll'">
+                    </div>
+                    <h5>California Roll</h5>
+                    <p>Kanikama, palta y pepino envuelto en sésamo tostado.</p>
+                    <button class="btn-primary" onclick="agregarAlCarrito('California Roll', 6800)">
+                        Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="categoria-platos" id="platos-preparados" style="margin-top: 4rem;">
+            <h3 class="categoria-titulo">Platos Preparados & Calientes</h3>
+            <div class="cards-grid-4">
+                <div class="card-item">
+                    <div class="card-img-holder">
+                        <img src="img/plato-1.jpg" alt="Sashimi Especial" onerror="this.src='https://via.placeholder.com/300x200/F4EFEB/6B6764?text=Sashimi'">
+                    </div>
+                    <h5>Sashimi Especial</h5>
+                    <p>Selección de cortes frescos del día, acompañados de salsa ponzu.</p>
+                    <button class="btn-primary" onclick="agregarAlCarrito('Sashimi Especial', 12000)">
+                        Agregar al Carrito
+                    </button>
+                </div>
+                <div class="card-item">
+                    <div class="card-img-holder">
+                        <img src="img/plato-2.jpg" alt="Nigiri Deluxe" onerror="this.src='https://via.placeholder.com/300x200/F4EFEB/6B6764?text=Nigiri'">
+                    </div>
+                    <h5>Nigiri Deluxe</h5>
+                    <p>Variedad de nigiris premium con toppings exclusivos.</p>
+                    <button class="btn-primary" onclick="agregarAlCarrito('Nigiri Deluxe', 9500)">
+                        Agregar al Carrito
+                    </button>
+                </div>
+                <div class="card-item">
+                    <div class="card-img-holder">
+                        <img src="img/plato-3.jpg" alt="Tempura Mixta" onerror="this.src='https://via.placeholder.com/300x200/F4EFEB/6B6764?text=Tempura'">
+                    </div>
+                    <h5>Tempura Mixta</h5>
+                    <p>Verduras y mariscos rebozados, servidos con salsa tentsuyu.</p>
+                    <button class="btn-primary" onclick="agregarAlCarrito('Tempura Mixta', 8500)">
+                        Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONÓCENOS -->
+    <section id="conocenos" class="page-section">
+        <div class="about-hero">
+            <div class="about-content-box">
+                <h2>Nosotros</h2>
+                <p class="lead-text">Un espacio concebido para desconectar del ruido urbano y conectar con los sentidos.</p>
+                <p>Fundado bajo principios estéticos wabi-sabi, Seisho busca la belleza en la imperfección natural, los materiales nobles como la madera de roble, la iluminación difusa y la vajilla de gres ceramista hecho a mano.</p>
+            </div>
+        </div>
+        <div class="about-secondary">
+            <div class="vertical-img-placeholder"></div>
+            <div class="about-text-side">
+                <h3>Maestría y Dedicación</h3>
+                <p>Con el paso del tiempo nos hemos dedicado en lo personal a aprender cada detalle para entregar la mejor calidad, además de contar con un equipo 100% profesional. Fuera de incorporar normas de buena convivencia, respeto y dignidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTÁCTANOS -->
+    <section id="contactanos" class="page-section">
+        <div class="section-header">
+            <h2>Contacto & Valoración</h2>
+            <p>Estamos atentos a tus comentarios y consultas</p>
+        </div>
+        
+        <div class="contacto-container">
+            <!-- Formulario a la izquierda -->
+            <form class="contacto-info contacto-form" id="contactForm" action="https://formsubmit.co/bhcreoenti@gmail.com" method="POST">
+                <div class="form-group">
+                    <input type="text" placeholder="Tu Nombre" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Correo Electrónico" required>
+                </div>
+                <div class="form-group">
+                    <textarea rows="4" placeholder="Mensaje o sugerencia" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Valoración de tu experiencia:</label>
+                    <div class="rating-stars" id="ratingStars">
+                        <span data-value="1">★</span>
+                        <span data-value="2">★</span>
+                        <span data-value="3">★</span>
+                        <span data-value="4">★</span>
+                        <span data-value="5">★</span>
+                    </div>
+                    <input type="hidden" id="selectedRating" value="5">
+                </div>
+                <button type="submit" class="btn-primary">Enviar Mensaje</button>
+            </form>
+
+            <!-- Mapa e info a la derecha -->
+            <div class="contacto-mapa visit-info">
+                <h3>Visítanos</h3>
+                <p>Ven a vivir la experiencia presencial en nuestro local con diseño exclusivo.</p>
+                <div style="margin-top: 1.5rem;">
+                    <span style="display:block; font-size: 0.9rem; margin-bottom: 8px; color: var(--text-muted);">Mapa de Ubicación - Vitacura, Stgo</span>
+                    <img src="img/mapa-ubicacion.jpeg" alt="Ubicación de Seisho Sushi" class="mapa-img" onerror="this.src='https://via.placeholder.com/600x300/E8D3CE/2C2A29?text=Mapa+Ubicacion'">
+                    <a href="https://www.google.com/maps/place/MAXI+PIZZA+TALCA/@-35.3969434,-71.6518738,623m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9665c74f726d5841:0xc2be58b3445f8751!8m2!3d-35.3969478!4d-71.6492989!16s%2Fg%2F11rss7w1fv?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn-primary">Ver Mapa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+<!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="terminos.html" target="_blank" rel="noopener noreferrer">Términos y Condiciones</a>
+            <a href="privacidad.html" target="_blank" rel="noopener noreferrer">Políticas de Privacidad</a>
+        </div>
+    
+        <div class="social-buttons-container">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/luztras.lasombra" class="social-btn instagram-btn" target="_blank" rel="noopener noreferrer" title="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/56967109265?text=Hola,%20me%20gustaría%20hacer%20un%20pedido" class="social-btn whatsapp-btn" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com" class="social-btn facebook-btn" target="_blank" rel="noopener noreferrer" title="Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a> 
+        </div>
+
+        <p class="copyright">&copy; 2026 Seisho Sushi. Todos los derechos reservados.</p>
+    </footer>
+    
+    <!-- MODAL CARRITO DE COMPRAS FLOTANTE -->
+    <div id="cartModal" class="cart-modal-overlay" onclick="cerrarConClickAfuera(event)">
+        <div class="cart-modal-content" onclick="event.stopPropagation()">
+            <div class="cart-header">
+                <h3>Carrito de Compras</h3>
+            </div>
+
+            <div class="cart-items-container" id="cartItemsContainer">
+                <p class="cart-empty-msg">Tu carrito está vacío.</p>
+            </div>
+
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotalPrice">$0</span>
+                </div>
+
+                <form id="checkoutForm" class="cart-checkout-form" onsubmit="finalizarCompra(event)">
+                    <h4 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 10px;">Datos de Envío</h4>
+                    <div class="form-group" style="margin-bottom: 10px;">
+                        <input type="text" placeholder="Nombre completo" required style="width: 100%; padding: 8px;">                  
+                    </div>
+                    <div class="form-group" style="margin-bottom: 10px;">
+                        <input type="text" placeholder="Dirección de Entrega" required style="width: 100%; padding: 8px;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 15px;">
+                        <input type="tel" placeholder="Teléfono de Contacto" required style="width: 100%; padding: 8px;">
+                    </div>
+                    <button type="submit" class="btn-primary full-width">Realizar Pedido</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
