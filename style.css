@@ -1422,3 +1422,24 @@ body.legal-page-body {
         font-size: 1rem !important;
     }
 }
+
+/* AJUSTE PARA EL CONTENEDOR DE RESERVAS */
+.reserva-botones-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .reserva-botones-container {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    
+    .reserva-botones-container .whatsapp-btn {
+        width: 100% !important;
+        height: 42px !important;
+        border-radius: 4px !important;
+    }
+}
