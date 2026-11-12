@@ -246,3 +246,39 @@ function finalizarCompra(event) {
     renderizarCarrito();
     toggleCart();
 }
+
+// --- FUNCIONES PARA EL VISOR DE CARTAS 9:16 ---
+
+function abrirCartaModal(rutaImagen) {
+    const modal = document.getElementById('cartaModal');
+    const imgContainer = document.getElementById('imgCartaAmpliada');
+    
+    if (modal && imgContainer) {
+        imgContainer.src = rutaImagen;
+        modal.style.display = 'flex';
+    }
+}
+
+function cerrarCartaModal(event) {
+    const modal = document.getElementById('cartaModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+}
+
+function cerrarCartaModalDirecto() {
+    const modal = document.getElementById('cartaModal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Permitir cerrar el visor de cartas con la tecla ESC también
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const modalCarta = document.getElementById('cartaModal');
+        if (modalCarta && modalCarta.style.display === 'flex') {
+            modalCarta.style.display = 'none';
+        }
+    }
+});
