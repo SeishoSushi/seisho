@@ -1025,3 +1025,148 @@ body.legal-page-body {
     margin-bottom: 1.5rem;
     color: var(--text-main);
 }
+
+/* ==========================================================================
+   DISEÑO RESPONSIVO (TABLETS Y CELULARES)
+   ========================================================================== */
+
+@media (max-width: 992px) {
+    /* Ajuste de grillas de 4 columnas a 2 columnas en tablets */
+    .cards-grid-4 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem;
+    }
+
+    .historia-container,
+    .contacto-container,
+    .about-secondary,
+    .video-section-preview {
+        grid-template-columns: 1fr !important;
+        flex-direction: column !important;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 1. HEADER Y MENÚ HAMBURGUESA MÓVIL */
+    .site-header {
+        padding: 1rem 1.5rem;
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 28px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 1500;
+    }
+
+    .menu-toggle span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: var(--text-main);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-cream);
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        padding: 1.5rem 0;
+        z-index: 1400;
+    }
+
+    /* Esta clase la activa tu script.js al tocar el botón hamburguesa */
+    .main-nav.open {
+        display: block !important;
+    }
+
+    .main-nav ul {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* 2. BANNER PRINCIPAL (HERO) */
+    .hero-banner {
+        height: auto !important;
+        min-height: 75vh;
+        padding: 4rem 1.5rem;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2.2rem !important;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 1rem !important;
+    }
+
+    .hero-content .btn-primary {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        margin: 10px auto !important;
+    }
+
+    /* 3. GRILLAS DE PRODUCTOS Y TARJETAS A 1 COLUMNA EN CELULAR */
+    .cards-grid-4,
+    .carousel-container {
+        grid-template-columns: 1fr !important;
+        flex-direction: column !important;
+        gap: 1.5rem;
+    }
+
+    .card-item,
+    .feature-card {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* 4. FRANJA DE INFORMACIÓN (UBICACIÓN, HORARIOS, CONTACTO) */
+    .info-strip {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 2rem 1rem;
+    }
+
+    /* 5. FORMULARIOS (RESERVAS Y CONTACTO) */
+    .reservation-container,
+    .contacto-container {
+        padding: 0 1rem;
+    }
+
+    .reserva-botones-container {
+        flex-direction: column !important;
+        gap: 10px;
+    }
+
+    /* 6. CARRITO FLOTANTE EN CELULARES */
+    .cart-modal-content {
+        max-width: 100% !important;
+        width: 92% !important; /* Deja un margen visible a la izquierda para tocar afuera y cerrar */
+        padding: 1.5rem;
+    }
+
+    /* 7. FOOTER */
+    .footer-links {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+    }
+}
