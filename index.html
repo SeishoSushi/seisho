@@ -183,37 +183,42 @@
                 </div>                
             </div>
 
-            <div class="carta-section" id="cartas">
+            <div id="cartaModal" class="carta-modal-overlay" onclick="cerrarCartaModal(event)" style="justify-content: center; align-items: center;">
+                <div style="position relative; max-width: 90%; max-height: 90vh; display: flex; justify-content: center; align-items: center;" onclick="event.stopPropagation()">
+                   <img id="imgCartaAmpliada" src="" alt="Carta Seisho Sushi" style="max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    <button type="button" onclick="cerrarCartaModalDirecto()" style="position: absolute; top: -15px; right: -15px; background: var(--text-main); color: var(--white); border: none; width: 36px; height: 36px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">&times;</button>
                 <h3>Nuestras Cartas</h3>
-                <div class="carousel-container">
+                </div>
+            </div>
                     
+            <div class="carousel-container">                          
                     <!-- CARTA 1 -->
-                    <div class="card-item">
+                    <div class="card-item" onclick="abrirCartaModal('img/carta-nigiri.jpg')" style="cursor: pointer;" title="Haz clic para ampliar la carta">
                         <div class="card-img-holder">
-                            <img src="img/carta-nigiri.jpg" alt="Carta Nigiri & Sashimi" onerror="this.src='https://via.placeholder.com/450x800/F4EFEB/6B6764?text=Carta+Nigiri'">
-                        </div>
+            <img src="img/carta-nigiri.jpg" alt="Carta Nigiri & Sashimi" onerror="this.src='https://via.placeholder.com/450x800/F4EFEB/6B6764?text=Carta+Nigiri'">
+        </div>
                         <h5>Edición Nigiri & Sashimi</h5>
                         <p>Selección diaria del mercado local e internacional.</p>
                     </div>
 
                     <!-- CARTA 2 -->
-                    <div class="card-item">
-                        <div class="card-img-holder">
-                            <img src="img/carta-rolls.jpg" alt="Carta Rolls de Autor" onerror="this.src='https://via.placeholder.com/450x800/F4EFEB/6B6764?text=Rolls+de+Autor'">
-                        </div>
-                        <h5>Rolls de Autor</h5>
-                        <p>Combinaciones sutiles sin exceso de queso crema.</p>
-                    </div>
+                    <div class="card-item" onclick="abrirCartaModal('img/carta-rolls.jpg')" style="cursor: pointer;" title="Haz clic para ampliar la carta">
+        <div class="card-img-holder">
+            <img src="img/carta-rolls.jpg" alt="Carta Rolls de Autor" onerror="this.src='https://via.placeholder.com/450x800/F4EFEB/6B6764?text=Rolls+de+Autor'">
+        </div>
+        <h5>Rolls de Autor</h5>
+        <p>Combinaciones sutiles sin exceso de queso crema. <em>(Haz clic para ver)</em></p>
+    </div>
 
                     <!-- CARTA 3 -->
-                    <div class="card-item">
-                        <div class="card-img-holder">
-                            <img src="img/carta-coctel.jpg" alt="Carta Coctelería" onerror="this.src='https://via.placeholder.com/450x800/F4EFEB/6B6764?text=Cocteleria'">
-                        </div>
-                        <h5>Coctelería & Mocktails</h5>
-                        <p>Infusiones botánicas, sake y yuzu artesanal.</p>
-                    </div>
-                </div>
+                    <div class="card-item" onclick="abrirCartaModal('img/carta-coctel.jpg')" style="cursor: pointer;" title="Haz clic para ampliar la carta">
+        <div class="card-img-holder">
+            <img src="img/carta-coctel.jpg" alt="Carta Coctelería" onerror="this.src='https://via.placeholder.com/450x800/F4EFEB/6B6764?text=Cocteleria'">
+        </div>
+        <h5>Coctelería & Mocktails</h5>
+        <p>Infusiones botánicas, sake y yuzu artesanal. <em>(Haz clic para ver)</em></p>
+    </div>
+</div>
                 <div style="text-align: center; margin-top: 2rem;">
                     <a href="#seccion-platos" class="btn-primary" onclick="switchSection('seccion-platos'); return false;">
                         Ver Menú Completo
